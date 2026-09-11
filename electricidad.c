@@ -5,6 +5,7 @@ void menuElectricidad(void)
 {
     char opcionElectricidad = 0;
     char ejecutarElectricidad = 1;
+    double energia = 0.0;
     double voltaje = 0.0;
     double corriente = 0.0;
     double resistencia = 0.0;
@@ -32,8 +33,12 @@ void menuElectricidad(void)
     scanf("%lf", &corriente);
     printf("Ingrese la resistencia (Ω): ");
     scanf("%lf", &resistencia);
+    if(resistencia<=0){
+        printf("Invalido, la resistencia debe ser mayor a 0");
+    }
+    else{
     printf("El voltaje es: %.2f V\n", calcularVoltaje(corriente, resistencia));
-        
+    }    
     break;
 
     case 2:
@@ -41,14 +46,31 @@ void menuElectricidad(void)
     scanf("%lf", &voltaje);
     printf("Ingrese la resistencia (Ω): ");
     scanf("%lf", &resistencia);
+    if(resistencia<=0){
+        printf("La resistencia debe ser mayor a 0");
+    }
+    else{
     printf("La corriente es: %.2f A\n", calcularCorriente(voltaje, resistencia));
+    }
     break;
+
     case 3:
     printf("Ingrese el voltaje (V): ");
     scanf("%lf", &voltaje);
     printf("Ingrese la corriente (A): ");
     scanf("%lf", &corriente);
-    printf("La resistencia es: %.2f Ω\n", calcularResistencia(voltaje, corriente));
+    if(corriente == 0){
+        printf("La corriente debe ser distinta a 0.\n");
+    }
+    else{
+            resistencia = calcularResistencia(voltaje,corriente);
+            if(resistencia<=0){
+                printf("La resistencia debe ser mayor a 0.\n");
+            }
+    else{
+    printf("La resistencia es: %.2f Ω\n", resistencia);
+    }
+}
     break;
 
     case 4:
@@ -64,7 +86,13 @@ void menuElectricidad(void)
     scanf("%lf", &potencia);
     printf("Ingrese el tiempo (s): ");
     scanf("%lf", &tiempo);
-    printf("La energia es: %.2f J\n", calcularEnergiaElectrica(potencia, tiempo));
+    if(tiempo <= 0){
+        printf("seleccione un tiempo mayor a 0");
+    }
+    else{
+        energia = calcularEnergiaElectrica(potencia, tiempo);
+    printf("La energia es: %.2f J\n", energia);
+    }
     break;
 
     case 0:
