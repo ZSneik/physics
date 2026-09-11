@@ -32,8 +32,14 @@ void menuDinamica(void)
                 scanf("%lf", &masa);
                 printf("Ingrese la aceleracion (m/s^2): ");
                 scanf("%lf", &aceleracion);
+                if(masa <= 0){
+                    printf("Valor invalido\n");
+                    printf("La masa debe ser mayor a 0");
+                }
+                else{
                 fuerza = calcularFuerza(masa, aceleracion);
                 printf("La fuerza es: %.2f N\n", fuerza);
+                }
                 break;
 
             case 2:
@@ -41,8 +47,22 @@ void menuDinamica(void)
                 scanf("%lf", &fuerza);
                 printf("Ingrese la aceleracion (m/s^2): ");
                 scanf("%lf", &aceleracion);
+                if(aceleracion == 0){
+                    printf("Resultado invalido: la aceleracion no puede ser 0.\n");
+                    printf("Indique un valor distinto a 0");
+                }
+
+                else
+                {
                 masa = calcularMasa(fuerza, aceleracion);
+                if(masa <= 0)
+                {
+                    printf("Resultado invalido: la masa calculada no puede ser menor o igual a 0.\n");
+                }
+                else{
                 printf("La masa es: %.2f kg\n", masa);
+                }
+            }
                 break;
 
             case 3:
@@ -50,15 +70,26 @@ void menuDinamica(void)
                 scanf("%lf", &fuerza);
                 printf("Ingrese la masa (kg): ");
                 scanf("%lf", &masa);
+                if(masa<=0){
+                    printf("Resultado invalido. ");
+                    printf("Ingresar un valor mayor que cero");
+                }
+                else{
                 aceleracion = calcularAceleracionDinamica(fuerza, masa);
                 printf("La aceleracion es: %.2f m/s^2\n", aceleracion);
+                }
                 break;
 
             case 4:
                 printf("Ingrese la masa (kg): ");
                 scanf("%lf", &masa);
+                if (masa<=0){
+                printf("La masa debe ser mayor a 0");
+                }
+                else{
                 peso = calcularPeso(masa);
                 printf("El peso es: %.2f N\n", peso);
+                }
                 break;
 
             case 0:
