@@ -16,7 +16,7 @@ int main(void)
         printf("2. dinamica\n");
         printf("3. electricidad\n");
         printf("4. energia\n");
-        printf("5. vectores\n");
+        printf("5. conversor de unidades\n");
         printf("0. Salir\n");
 
         scanf("%hhd", &opcionMenu);
@@ -28,19 +28,19 @@ int main(void)
                 break;
 
             case 2:
-                printf("Dinamica\n");
+                menuDinamica();
                 break;
 
             case 3:
-                printf("Electricidad\n");
+                menuElectricidad();
                 break;
 
             case 4:
-                printf("Energia\n");
+                menuEnergia();
                 break;
 
             case 5:
-                printf("Vectores\n");
+                menuConversiones();
                 break;
 
             case 0:
