@@ -1,2 +1,4 @@
+//Agregamos estas lineas para no cruzar informacion innecesaria
 *.exe
 *.o
+calculadora
