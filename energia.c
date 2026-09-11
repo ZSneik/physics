@@ -31,17 +31,27 @@ void menuEnergia(void)
     case 1:
     printf("ingrese la masa (kg): ");
     scanf("%lf", &masa);
+    if(masa <= 0){
+        printf("La masa indicada debe ser mayor a 0");
+    }
+    else{
     printf("Ingrese la velocidad (m/s): ");
     scanf("%lf", &velocidad);
     printf("La energia cinetica es: %.2f J\n", calcularEnergiaCinetica(masa, velocidad));
+    }
     break;
 
     case 2:
     printf("Ingrese la masa (kg): ");
     scanf("%lf", &masa);
+    if(masa <= 0){
+        printf("La masa indicada debe ser mayor a 0");
+    }
+    else{
     printf("Ingrese la altura (m): ");
     scanf("%lf", &altura);
     printf("La energia potencial es: %.2f J\n", calcularEnergiaPotencial(masa, altura));
+    }
     break;
 
     case 3:
@@ -56,7 +66,12 @@ void menuEnergia(void)
     scanf("%lf", &trabajo);
     printf("Ingrese el tiempo (s): ");
     scanf("%lf", &tiempo);
+    if(tiempo <= 0){
+        printf("El tiempo indicado debe ser mayor a 0");
+    }
+    else{
     printf("La potencia mecanica es: %.2f W\n", calcularPotenciaMecanica(trabajo, tiempo));
+    }
     break;
 
     case 0:
