@@ -53,6 +53,8 @@ do
 } while (molalidad <= 0);
 
     double resultado = calcularEbullioscopia(factorVanthoff,constante,molalidad);
+    double temperaturaFinal= 100.0 + resultado;
+    printf("Temperatura de ebullicion: %.4f C\n",temperaturaFinal);
     printf("Elevacion ebullioscopica: %.4f C\n", resultado);
                 break;
 
