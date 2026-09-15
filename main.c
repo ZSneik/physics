@@ -5,8 +5,8 @@
 int main(void)
 {
     char opcionMenu = 0;
-char iniciarPrograma = 1;
-while(iniciarPrograma)
+    char iniciarPrograma = 1;
+    while(iniciarPrograma)
 {
 
 printf("==========MENU SCIENTIA==========\n");

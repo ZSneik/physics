@@ -8,6 +8,81 @@ void menuQuimica(void);
 void menuFisica(void);
 void menuConversiones(void);
 
+
+//=====================================CONVERSORES===================================================
+
+
+void menuDistancias(void);
+
+void menuMasa(void);
+
+void menuTiempo(void);
+
+void menuVelocidad(void);
+
+void menuTemperatura(void);
+
+//=======DISTANCIAS========
+
+double calcularMetrosAKilometros(double metros);
+
+double calcularKilometrosAMetros(double kilometros);
+
+double calcularMetrosACentimetros(double metros);
+
+double calcularCentimetrosAMetros(double centimetros);
+
+double calcularMetrosAMilimetros(double metros);
+
+double calcularMilimetrosAMetros(double milimetros);
+
+double calcularKilometrosAMillas(double kilometros);
+
+double calcularMillasAKilometros(double millas);
+
+double calcularPiesAMetros(double pies);
+
+double calcularMetrosAPies(double metros);
+
+
+
+//=======MASA========
+
+double calcularKilogramosAGramos(double kilogramos);
+
+double calcularGramosAKilogramos(double gramos);
+
+
+//=======TIEMPO========
+
+double calcularSegundosAMinutos(double segundos);
+
+double calcularMinutosASegundos(double minutos);
+
+double calcularMinutosAHoras(double minutos);
+
+double calcularHorasAMinutos(double horas);
+
+
+//=======VELOCIDAD========
+
+double calcularMetrosSegundoAKilometrosHora(double velocidad);
+
+double calcularKilometrosHoraAMetrosSegundo(double velocidad);
+
+
+//=======TEMPERATURA========
+
+double calcularCelsiusAKelvin(double celsius);
+
+double calcularKelvinACelsius(double kelvin);
+
+double calcularCelsiusAFahrenheit(double celsius);
+
+double calcularFahrenheitACelsius(double fahrenheit);
+
+//=============================================FISICA================================================
+
 // ===== CINEMÁTICA =====
 
 void menuCinematica(void);
@@ -62,75 +137,12 @@ double calcularTrabajo(double fuerza, double distancia);
 
 double calcularPotenciaMecanica(double trabajo, double tiempo);
 
-//=====================================CONVERSORES===================================================
 
 
-void menuDistancias(void);
+//=======================================QUIMICA=====================
 
-void menuMasa(void);
+//===========================COLIGATIVAS========================
 
-void menuTiempo(void);
-
-void menuVelocidad(void);
-
-void menuTemperatura(void);
-
-//=======DISTANCIAS========
-
-double calcularMetrosAKilometros(double metros);
-
-double calcularKilometrosAMetros(double kilometros);
-
-double calcularMetrosACentimetros(double metros);
-
-double calcularCentimetrosAMetros(double centimetros);
-
-double calcularMetrosAMilimetros(double metros);
-
-double calcularMilimetrosAMetros(double milimetros);
-
-double calcularKilometrosAMillas(double kilometros);
-
-double calcularMillasAKilometros(double millas);
-
-double calcularPiesAMetros(double pies);
-
-double calcularMetrosAPies(double metros);
-
-
-//=======MASA========
-
-double calcularKilogramosAGramos(double kilogramos);
-
-double calcularGramosAKilogramos(double gramos);
-
-
-//=======TIEMPO========
-
-double calcularSegundosAMinutos(double segundos);
-
-double calcularMinutosASegundos(double minutos);
-
-double calcularMinutosAHoras(double minutos);
-
-double calcularHorasAMinutos(double horas);
-
-
-//=======VELOCIDAD========
-
-double calcularMetrosSegundoAKilometrosHora(double velocidad);
-
-double calcularKilometrosHoraAMetrosSegundo(double velocidad);
-
-
-//=======TEMPERATURA========
-
-double calcularCelsiusAKelvin(double celsius);
-
-double calcularKelvinACelsius(double kelvin);
-
-double calcularCelsiusAFahrenheit(double celsius);
-
-double calcularFahrenheitACelsius(double fahrenheit);
+void menuColigativas(void);
 
 #endif
