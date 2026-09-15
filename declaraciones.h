@@ -145,4 +145,7 @@ double calcularPotenciaMecanica(double trabajo, double tiempo);
 
 void menuColigativas(void);
 
+double calcularEbullioscopia(double factorVanthoff,
+                             double constante,
+                             double molalidad);
 #endif

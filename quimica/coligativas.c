@@ -8,7 +8,6 @@ void menuColigativas(void)
     double factorVanthoff = 0;
     double constante = 0;
     double molalidad = 0;
-    double ebulloscopia = 0;
 
 while(iniciarPrograma)
     {
@@ -22,12 +21,39 @@ while(iniciarPrograma)
     switch(opcionMenu)
         {
 case 1:
-    printf("Ingrese la constante ebullioscopica (Kb): \n");
+do
+{
+    printf("Ingrese la constante ebullioscopica (Kb): ");
     scanf("%lf", &constante);
-    printf("Ingrese el factor teorico de Vant Hoff\n");
+
+    if(constante <= 0)
+    {
+        printf("La constante debe ser mayor a 0.\n");
+    }
+
+} while(constante <= 0);
+
+do
+{
+    printf("Ingrese el factor teorico de Vant Hoff (i)\n");
     scanf("%lf", &factorVanthoff);
-    printf("Ingrese la molalidad");
+    if(factorVanthoff <= 0)
+    {
+        printf("El factor ingresado debe ser mayor a 0");
+    }
+} while (factorVanthoff <= 0);
+
+do
+{
+    printf("Ingrese la molalidad (m)");
     scanf("%lf", &molalidad);
+    if(molalidad <= 0){
+        printf("La molalidad debe ser mayor a 0");
+        }
+} while (molalidad <= 0);
+
+    double resultado = calcularEbullioscopia(factorVanthoff,constante,molalidad);
+    printf("Elevacion ebullioscopica: %.4f C\n", resultado);
                 break;
 
             case 0:
