@@ -1,6 +1,13 @@
 #ifndef DECLARACIONES_H
 #define DECLARACIONES_H
 
+
+//========MENU=====
+
+void menuQuimica(void);
+void menuFisica(void);
+void menuConversiones(void);
+
 // ===== CINEMÁTICA =====
 
 void menuCinematica(void);
@@ -57,7 +64,6 @@ double calcularPotenciaMecanica(double trabajo, double tiempo);
 
 //=====================================CONVERSORES===================================================
 
-void menuConversiones(void);
 
 void menuDistancias(void);
 

@@ -1,57 +1,40 @@
-#include <stdio.h>
-#include "declaraciones.h"
+#include<stdio.h>
+#include"declaraciones.h"
+
 
 int main(void)
 {
     char opcionMenu = 0;
-    char ejecutarPrograma = 1;
+char iniciarPrograma = 1;
+while(iniciarPrograma)
+{
 
-    while (ejecutarPrograma)
-    {
-        printf("====================================================\n");
-        printf("Bienvenido a la calculadora de fisicas\n");
-        printf("====================================================\n");
-        printf("Seleccione la opcion que desea realizar\n");
-        printf("1. cinematica\n");
-        printf("2. dinamica\n");
-        printf("3. electricidad\n");
-        printf("4. energia\n");
-        printf("5. conversor de unidades\n");
-        printf("0. Salir\n");
+printf("==========MENU SCIENTIA==========\n");
+printf("Bienvenido al menu de scientia\n");
+printf("seleccione la disciplinad e su operacion\n");
+printf("1: Fisica\n");
+printf("2: Quimica\n");
+printf("3: Conversion de unidades\n");
+printf("0: Salir del programa");
+scanf("%hhd", &opcionMenu);
 
-        scanf("%hhd", &opcionMenu);
+switch(opcionMenu){
+    case 1: menuFisica();
+    break;
+    
+    case 2: menuQuimica();
+    break;
 
-        switch (opcionMenu)
-        {
-            case 1:
-                menuCinematica();
-                break;
+    case 3: menuConversiones();
+    break;
 
-            case 2:
-                menuDinamica();
-                break;
+    case 0: iniciarPrograma = 0;
+    break;
 
-            case 3:
-                menuElectricidad();
-                break;
-
-            case 4:
-                menuEnergia();
-                break;
-
-            case 5:
-                menuConversiones();
-                break;
-
-            case 0:
-                ejecutarPrograma = 0;
-                break;
-
-            default:
-                printf("Opcion no valida\n");
-                break;
-        }
+    default:
+    printf("Opcion no valida\n");
+    break;
     }
-
-    return 0;
+  }
+  return 0;
 }
