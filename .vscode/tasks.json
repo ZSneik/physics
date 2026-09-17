@@ -2,27 +2,44 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "cppbuild",
             "label": "Build Scientia",
-            "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
+            "type": "shell",
+
+            "linux": {
+                "command": "gcc"
+            },
+
+            "windows": {
+                "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe"
+            },
+
             "args": [
-                "main.c",
-                "fisica\\*.c",
-                "quimica\\*.c",
-                "conversiones\\*.c",
-                "-I.",
                 "-Wall",
                 "-Wextra",
-                "-g",
+                "-std=c17",
+                "-I.",
+                "main.c",
+                "fisica/cinematica.c",
+                "fisica/dinamica.c",
+                "fisica/electricidad.c",
+                "fisica/energia.c",
+                "fisica/menufisica.c",
+                "quimica/coligativas.c",
+                "quimica/menuquimica.c",
+                "quimica/concentraciones.c",
+                "conversiones/conversiones.c",
                 "-o",
-                "calculadora.exe"
+                "scientia"
             ],
+
             "options": {
                 "cwd": "${workspaceFolder}"
             },
+
             "problemMatcher": [
                 "$gcc"
             ],
+
             "group": {
                 "kind": "build",
                 "isDefault": true

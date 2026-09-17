@@ -141,6 +141,8 @@ double calcularPotenciaMecanica(double trabajo, double tiempo);
 
 //=======================================QUIMICA=====================
 
+
+
 //===========================COLIGATIVAS========================
 
 void menuColigativas(void);
@@ -148,4 +150,23 @@ void menuColigativas(void);
 double calcularEbullioscopia(double factorVanthoff,
                              double constante,
                              double molalidad);
+
+
+
+
+//=========================CONCENTRACIONES==============================
+void menuConcentraciones(void);
+
+double calcularMolaridad (double nsoluto, double vsolucion);
+
+double calcularMolalidad (double nsoluto, double msolvente);
+
+double fraccionmolar (double ni, double ntotal);
+
+double masamasa (double msoluto, double msolucion);
+
+double masavolumen (double msoluto, double msolucion);
+
+double volumenvolumen (double vsoluto, double vsolucion);
+
 #endif

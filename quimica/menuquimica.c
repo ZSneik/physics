@@ -12,6 +12,7 @@ void menuQuimica(void)
     printf("Bienvenido/a a la seccion de quimica\n");
     printf("Seleccione una opcion\n");
     printf("1: Propiedades coligativas\n");
+    printf("2: Calcular concentraciones\n");
     printf("0: Volver al menu principal\n");
     scanf("%hhd", &opcionMenu);
     switch (opcionMenu)
@@ -19,6 +20,11 @@ void menuQuimica(void)
     case 1:
     menuColigativas();
     break;
+    
+    case 2:
+    menuConcentraciones();
+    break;
+
     
     case 0:
     iniciarPrograma= 0;
