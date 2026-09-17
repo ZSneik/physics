@@ -49,6 +49,33 @@ case 1:
     }
     break;
 
+    case 2:
+    printf("ingresar moles de soluto.\n");
+    scanf("%lf",&nsoluto);
+    printf("Ingrese los kg de solvente \n");
+    scanf("%lf",&msolvente);
+    if(msolvente == 0){
+        printf("La cantidad de solvente no puede ser igual a 0\n");
+    }
+else{
+    printf("Molalidad: %.4f mol/Kg\n",
+    calcularMolalidad(nsoluto, msolvente));
+}
+    break;
+
+case 3:
+    printf("Ingrese los moles del componente.\n");
+    scanf("%lf", &ni);
+    printf("Ingrese la cantidad total de moles de la mezcla\n");
+    scanf("%lf",&ntotal);
+if(ntotal == 0){
+    printf("La cantidad total no puede ser igual a 0\n");
+}
+else{
+    printf("La fraccion molar equivale a %.4f \n",
+    fraccionmolar(ni,ntotal));
+}
+    break;
 
 case 0:
     iniciarPrograma = 0;
