@@ -29,12 +29,12 @@ printf("3: Fraccion molar\n");
 printf("4: porcentaje masa/masa\n");
 printf("5: Porcentaje masa/volument\n");
 printf("6: Porcentaje volumen/volument\n");
-
-
 printf("0: Salir del programa\n");
 scanf("%hhd",&opcionMenu);
 switch (opcionMenu)
 {
+
+
 case 1:
     printf("ingrese los moles de soluto\n");
     scanf("%lf",&nsoluto);
@@ -83,15 +83,44 @@ case 4:
     printf("Ingrese los gramos de la solucion\n");
     scanf("%lf", &msolucion);
     if(msolucion == 0){
-        printf("los moles de la solucion no pueden ser igual a 0\n");
+        printf("la masa de la solucion no pueden ser igual a 0\n");
     }
 else{
-    printf("El porcentaje masa masa equivale a %.4lf\ %%n",
+    printf("El porcentaje masa masa equivale a %.4lf %%\n",
     masamasa (msoluto,msolucion));
 }
     break;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+case 6:
+    printf("Ingrese el volumen del soluto\n");
+    scanf("%lf", &vsoluto);
+    printf("Ingrese el volumen de la solucion");
+    scanf("%lf",&vsolucion);
+if(vsolucion == 0){
+    printf("El volumen ingresado no puede ser igual a 0\n");
+}
+    else{
+    printf("El porcentaje equivale a: %.4f %%\n",
+    volumenvolumen (vsoluto, vsolucion));
+}
+
+break;
 
 case 0:
     iniciarPrograma = 0;
