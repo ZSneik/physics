@@ -27,8 +27,8 @@ printf("1: MolaRidad\n");
 printf("2: MolaLidad\n");
 printf("3: Fraccion molar\n");
 printf("4: porcentaje masa/masa\n");
-printf("5: Porcentaje masa/volument\n");
-printf("6: Porcentaje volumen/volument\n");
+printf("5: Porcentaje masa/volumen\n");
+printf("6: Porcentaje volumen/volumen\n");
 printf("0: Salir del programa\n");
 scanf("%hhd",&opcionMenu);
 switch (opcionMenu)
@@ -91,20 +91,30 @@ else{
 }
     break;
 
+    
+case 5:
 
+    printf("Ingrese los gramos del soluto\n");
+    scanf("%lf", &msoluto);
 
+    printf("Ingrese el volumen de la solucion en mL\n");
+    scanf("%lf", &vsolucion);
 
+    if(vsolucion == 0){
 
+        printf("El volumen de la solucion no puede ser igual a 0\n");
 
+    }
 
+    else{
 
+        printf("El porcentaje masa/volumen equivale a %.4f %%\n",
 
+        masavolumen(msoluto, vsolucion));
 
+    }
 
-
-
-
-
+    break;
 
     
 case 6:
