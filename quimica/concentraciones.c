@@ -77,6 +77,22 @@ else{
 }
     break;
 
+case 4:
+    printf("Ingrese los gramos del soluto\n");
+    scanf("%lf", &msoluto);
+    printf("Ingrese los gramos de la solucion\n");
+    scanf("%lf", &msolucion);
+    if(msolucion == 0){
+        printf("los moles de la solucion no pueden ser igual a 0\n");
+    }
+else{
+    printf("El porcentaje masa masa equivale a %.4lf\ %%n",
+    masamasa (msoluto,msolucion));
+}
+    break;
+
+
+
 case 0:
     iniciarPrograma = 0;
     break;
