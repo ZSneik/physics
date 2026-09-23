@@ -11,7 +11,7 @@ int main(void)
 
 printf("==========MENU SCIENTIA==========\n");
 printf("Bienvenido al menu de scientia\n");
-printf("seleccione la disciplinad e su operacion\n");
+printf("seleccione la disciplina de su operacion\n");
 printf("1: Fisica\n");
 printf("2: Quimica\n");
 printf("3: Conversion de unidades\n");
