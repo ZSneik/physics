@@ -65,6 +65,51 @@ do
             default:
                 printf("Opcion invalida\n");
                 break;
+case 2:
+
+do
+{
+    printf("Ingrese la constante crioscopica (Kf): ");
+    scanf("%lf", &constante);
+
+    if(constante <= 0)
+    {
+        printf("La constante debe ser mayor a 0.\n");
+    }
+
+} while(constante <= 0);
+
+do
+{
+    printf("Ingrese el factor teorico de Van't Hoff (i): ");
+    scanf("%lf", &factorVanthoff);
+
+    if(factorVanthoff <= 0)
+    {
+        printf("El factor ingresado debe ser mayor a 0.\n");
+    }
+
+} while(factorVanthoff <= 0);
+
+do
+{
+    printf("Ingrese la molalidad (m): ");
+    scanf("%lf", &molalidad);
+
+    if(molalidad <= 0)
+    {
+        printf("La molalidad debe ser mayor a 0.\n");
+    }
+
+} while(molalidad <= 0);
+
+double resultado = calcularCrioscopia(factorVanthoff, constante, molalidad);
+double temperaturaFinal = 0.0 - resultado;
+
+printf("Temperatura de congelacion: %.4f C\n", temperaturaFinal);
+printf("Descenso crioscopico: %.4f C\n", resultado);
+
+break;
         }
     }
 }
@@ -75,6 +120,15 @@ do
 double calcularEbullioscopia(double factorVanthoff,
                              double constante,
                              double molalidad)
+{
+    return factorVanthoff * constante * molalidad;
+}
+
+//============= CRIOSCOPIA ===========
+
+double calcularCrioscopia(double factorVanthoff,
+                          double constante,
+                          double molalidad)
 {
     return factorVanthoff * constante * molalidad;
 }

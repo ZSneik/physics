@@ -1,4 +1,17 @@
-//Agregamos estas lineas para no cruzar informacion innecesaria
+# Ejecutables
+
 *.exe
+
+# Archivos objeto
+
 *.o
-calculadora
+
+# Configuración personal de VS Code
+
+.vscode/
+
+# Archivos temporales
+
+*.tmp
+*.temp
+*~

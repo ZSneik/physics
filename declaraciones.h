@@ -151,6 +151,9 @@ double calcularEbullioscopia(double factorVanthoff,
                              double constante,
                              double molalidad);
 
+double calcularCrioscopia(double factorVanthoff,
+                          double constante,
+                          double molalidad);
 
 
 
